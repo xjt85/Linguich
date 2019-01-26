@@ -11,11 +11,13 @@
 }
 
 body {
-  font-size: 16px;
   min-width: 320px;
   position: relative;
-  line-height: 1.65;
   overflow-x: hidden;
+  font-family: $default-font;
+  font-size: 14px;
+  line-height: 1.65;
+  color: $text_grey;
 
   input,
   textarea {
@@ -51,12 +53,134 @@ strong {
   font-weight: bold;
 }
 
-//Основная стилизация-------------------------------------------------------------------------------------
-ul,
-p {
-  padding: 0;
-  margin: 0;
+a {
+  text-decoration: none;
+  color: $text_grey;
 }
 
+//Основная стилизация-------------------------------------------------------------------------------------
+
+.header {
+  padding-top: 10px;
+}
+
+.header-logo,
+.logo-descr {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header-logo {
+  width: 116px;
+}
+
+.logo-descr {
+  line-height: 16px;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-weight: 400;
+
+  &__worktime {
+    position: relative;
+    line-height: 16px;
+    padding-left: 25px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      font-family: 'Font Awesome 5 Free';
+      content: '\f017';
+      color: $text-blue;
+    }
+  }
+
+  &__address {
+    position: relative;
+    line-height: 16px;
+    padding-left: 25px;
+    margin-right: 23px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f124';
+      color: $text-blue;
+    }
+
+  }
+
+  &__phone {
+    padding-left: 25px;
+    position: relative;
+    line-height: 16px;
+    font-size: 24px;
+    font-weight: 700;
+
+  }
+
+  &__span {
+    color: $text-blue;
+    font-weight: 700;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  &__li {
+    padding: 0;
+    &.active a {
+      color: $text-blue;
+    }
+  }
+}
+
+.header-main {
+  min-height: 955px;
+  background-image: url('../img/header-bg.png');
+  padding-top: 140px;
+}
+
+.h1 {
+  position: relative;
+  font: 700 30px/48px 'CirceBold', sans-serif;
+  color: #fff;
+  text-align: center;
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -63px;
+    width: 88px;
+    height: 167px;
+    background-image: url('../img/branch.png');
+  }
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -55px;
+    width: 88px;
+    height: 167px;
+    background-image: url('../img/branch.png');
+    transform: scale(-1, 1);
+  }
+}
 
 @import "media"; // Always at the end
