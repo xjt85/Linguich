@@ -492,16 +492,17 @@ button::-moz-focus-inner {
     position: absolute;
     width: 68px;
     height: 68px;
-    background: url('../img/button_download.png') center / 69px 69px no-repeat;
+    background: $button_download url('../img/button_download.png') center / 69px 69px no-repeat;
     border: none;
     border-radius: 50%;
     top: 16px;
-    left: -44px;
+    left: -32px;
     transition: all 0.2s;
     cursor: pointer;
 
     &:hover {
         box-shadow: 0px 0px 40px $button_download;
+        background-color: darken($button_download, 3%);
     }
 }
 
