@@ -379,14 +379,11 @@ button::-moz-focus-inner {
     }
 }
 
-.achievements-s {
-    padding: 40px 0 100px;
-    text-align: center;
-}
-
 //--------------------------------------------------------------------------------------------------------
 
 .achievements {
+    padding: 40px 0 80px;
+
     &__h2 {
         position: relative;
         text-align: center;
@@ -413,7 +410,9 @@ button::-moz-focus-inner {
 }
 
 .achievement {
-    margin-bottom: 110px;
+    &:not(:last-child) {
+        margin-bottom: 110px;
+    }
 
     &__img {
         width: 262px;
@@ -463,9 +462,20 @@ button::-moz-focus-inner {
 
 //--------------------------------------------------------------------------------------------------------
 
+.flamp-s {
+    min-height: 1114px;
+    padding-bottom: 190px;
+}
+
+.flamp-widget {
+    display: block;
+}
+
+//--------------------------------------------------------------------------------------------------------
+
 .download-s {
     position: relative;
-    padding-top: 80px;
+    padding-top: 90px;
     background: url('../img/download-bg.png') 100% 0% no-repeat;
     min-height: 598px;
     color: #fff;
@@ -488,15 +498,15 @@ button::-moz-focus-inner {
     }
 }
 
-.button_dwnld {
-    position: absolute;
+.button_round {
+    position: relative;
     width: 68px;
     height: 68px;
     background: $button_download url('../img/button_download.png') center / 69px 69px no-repeat;
     border: none;
     border-radius: 50%;
-    top: 16px;
-    left: -32px;
+    top: 5px;
+    left: -46px;
     transition: all 0.2s;
     cursor: pointer;
 
@@ -504,9 +514,35 @@ button::-moz-focus-inner {
         box-shadow: 0px 0px 40px $button_download;
         background-color: darken($button_download, 3%);
     }
+
+    &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 282px;
+        height: 282px;
+        background: url('../img/concentric.png');
+        top: -105px;
+        right: -96px;
+        cursor: default;
+        z-index: 1;
+    }
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 492px;
+        height: 595px;
+        background: url('../img/download-book.png');
+        left: -362px;
+        top: -93px;
+        cursor: default;
+    }
 }
 
 .ourcourses {
+    padding-top: 120px;
     &__h2 {
         position: relative;
         text-align: center;
@@ -525,6 +561,22 @@ button::-moz-focus-inner {
             right: 0;
             margin: auto;
         }
+    }
+}
+
+.tab-header__item {
+    font: 300 24px"CirceLight", sans-serif;
+    padding: 15px 0 15px 60px;
+}
+
+.tab-content {
+    padding-left: 40px;
+    &__p {
+        font: bold 24px/48px 'CirceBold', sans-serif;
+    }
+
+    &__text {
+        font: normal 18px/36px 'CirceRegular', sans-serif;
     }
 }
 
