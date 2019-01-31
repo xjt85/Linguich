@@ -94,6 +94,7 @@ button::-moz-focus-inner {
 
 .logo-descr {
     line-height: 16px;
+    margin-left: -20px;
 }
 
 .contacts {
@@ -179,35 +180,36 @@ button::-moz-focus-inner {
 
 .header-main {
     min-height: 854px;
-    background-image: url('../img/header-bg.png');
-    background-position: bottom left;
-    padding: 140px 0 100px;
+    background: url('../img/header-bg.png') -8px -103px no-repeat;
+    padding: 134px 0 100px;
     color: #fff;
 }
 
 .h1 {
     position: relative;
-    font: 700 30px/48px 'CirceBold', sans-serif;
+    font: 700 30px/48px CirceBold, sans-serif;
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 43px;
+    margin-left: -18px;
+    width: 113%;
 
     &::before,
     &::after {
         display: block;
         position: absolute;
         content: '';
-        top: -40px;
+        top: -35px;
         width: 88px;
         height: 167px;
         background-image: url('../img/branch.png');
     }
 
     &::before {
-        left: -63px;
+        left: -81px;
     }
 
     &::after {
-        right: -55px;
+        right: -82px;
         transform: scale(-1, 1);
     }
 }
@@ -220,8 +222,9 @@ button::-moz-focus-inner {
         background-color: #fff;
         font-weight: 400;
         font-size: 18px;
-        padding: 7px 30px;
+        padding: 7px 18px;
         margin-bottom: 7px;
+        text-align: center;
 
         &:hover {
             background-color: rgb(216, 216, 216);
@@ -231,15 +234,20 @@ button::-moz-focus-inner {
     }
 }
 
-.methodics-h2 {
-    font-weight: 700;
-    font-size: 22px;
-    // color: #ffffff;
-    margin-bottom: 35px;
+.h2 {
+    font: 400 36px/60px 'CirceBold', sans-serif;
 }
 
 .methodics {
     margin-bottom: 35px;
+
+    &-h2 {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.36em;
+        // color: #ffffff;
+        margin-bottom: 35px;
+    }
 
     &__li {
         position: relative;
@@ -266,7 +274,7 @@ button::-moz-focus-inner {
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
-    padding: 20px 70px;
+    padding: 25px 105px;
     border: none;
     border-radius: 40px;
     letter-spacing: 5.04px;
@@ -284,10 +292,6 @@ button::-moz-focus-inner {
 
 .button_more {
     background-color: #fff;
-}
-
-.h2 {
-    font: 400 36px/60px 'CirceBold', sans-serif;
 }
 
 //--------------------------------------------------------------------------------------------------------
@@ -476,14 +480,15 @@ button::-moz-focus-inner {
 .download-s {
     position: relative;
     padding-top: 90px;
-    background: url('../img/download-bg.png') 100% 0% no-repeat;
-    min-height: 598px;
+    background: url('../img/download-bg.png') no-repeat;
+    background-position: 100% 0;
+    height: 563px;
     color: #fff;
 }
 
 .download {
     &__h2 {
-        font: 700 30px/48px Circe, sans-serif;
+        font: 700 30px/1.6em Circe, sans-serif;
         margin-bottom: 50px;
         width: 110%;
         margin-left: -15px;
@@ -498,15 +503,24 @@ button::-moz-focus-inner {
     }
 }
 
-.button_round {
+.button-round-wrapper {
+    width: 525px;
+    height: 609px;
     position: relative;
+    top: -101px;
+    left: -16px;
+    background: url('../img/button-round_bg.png') no-repeat;
+}
+
+.button-round {
     width: 68px;
     height: 68px;
-    background: $button_download url('../img/button_download.png') center / 69px 69px no-repeat;
+    position: absolute;
+    top: 107px;
+    left: 348px;
+    background: $button_download url('../img/button-round.png') center / 69px 69px no-repeat;
     border: none;
     border-radius: 50%;
-    top: 5px;
-    left: -46px;
     transition: all 0.2s;
     cursor: pointer;
 
@@ -515,38 +529,17 @@ button::-moz-focus-inner {
         background-color: darken($button_download, 3%);
     }
 
-    &::before {
-        position: absolute;
-        display: block;
-        content: '';
-        width: 282px;
-        height: 282px;
-        background: url('../img/concentric.png');
-        top: -105px;
-        right: -96px;
-        cursor: default;
-        z-index: 1;
-    }
-
-    &::after {
-        position: absolute;
-        display: block;
-        content: '';
-        width: 492px;
-        height: 595px;
-        background: url('../img/download-book.png');
-        left: -362px;
-        top: -93px;
-        cursor: default;
-    }
 }
+
+//--------------------------------------------------------------------------------------
 
 .ourcourses {
     padding-top: 120px;
+
     &__h2 {
         position: relative;
         text-align: center;
-        margin-bottom: 105px;
+        margin-bottom: 100px;
 
         &::after {
             position: absolute;
@@ -566,17 +559,193 @@ button::-moz-focus-inner {
 
 .tab-header__item {
     font: 300 24px"CirceLight", sans-serif;
-    padding: 15px 0 15px 60px;
+    padding: 13px 0 13px 60px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &.active {
+        font-family: 'CirceBold', sans-serif;
+    }
 }
 
 .tab-content {
     padding-left: 40px;
+
+    &__h3 {
+        font: bold 36px/1.66em 'Circe', sans-serif;
+    }
+
     &__p {
-        font: bold 24px/48px 'CirceBold', sans-serif;
+        font: 24px/2em 'CirceBold', sans-serif;
+        background-color: $selection_blue;
     }
 
     &__text {
-        font: normal 18px/36px 'CirceRegular', sans-serif;
+        font: normal 18px/2em 'CirceRegular', sans-serif;
+    }
+
+    &__item {
+        display: none;
+        background-color: #f1f5f9;
+        background-repeat: no-repeat;
+
+        &:nth-child(1) {
+            background-image: url("../img/services/services-bg1.png");
+            background-position: -485% -25%;
+        }
+
+        &:nth-child(2) {
+            background-image: url("../img/services/services-bg2.png");
+            background-position: 39px 23px;
+        }
+
+        &:nth-child(3) {
+            background-image: url("../img/services/services-bg3.jpg");
+            background-position: -65px 0px;
+        }
+
+        &:nth-child(4) {
+            background-image: url("../img/services/services-bg4.jpg");
+            background-position: -87px 0;
+        }
+
+        &:nth-child(5) {
+            background-image: url("../img/services/services-bg5.jpg");
+            background-position: -102px 0;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+}
+
+//-----------------------------------------------------------------------
+
+.gallery__h2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 253px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $text-pink;
+        bottom: -13px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+
+
+//---------------------------Список преподавателей------------------------------------------------
+
+.teacherslist__h2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 253px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $text-pink;
+        bottom: -13px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+.lang-select {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        position: relative;
+        border-radius: 24px;
+        width: 210px;
+        padding: 6px 0 8px;
+        text-align: center;
+        background-color: $teachers_li;
+        color: #fff;
+        font-size: 20px;
+        margin-right: 23px;
+        margin-bottom: 25px;
+
+        &.active {
+            background-color: $text_pink;
+        }
+
+        &::after {
+            position: absolute;
+            top: 4px;
+            left: 7px;
+            display: block;
+            width: 38px;
+            height: 38px;
+            content: '';
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(2)::after {
+            background-image: url('../img/countries/c1.png');
+        }
+
+        &:nth-child(3)::after {
+            background-image: url('../img/countries/c2.png');
+        }
+
+        &:nth-child(4)::after {
+            background-image: url('../img/countries/c3.png');
+        }
+
+        &:nth-child(5)::after {
+            background-image: url('../img/countries/c4.png');
+        }
+
+        &:nth-child(6)::after {
+            background-image: url('../img/countries/c5.png');
+        }
+
+        &:nth-child(7)::after {
+            background-image: url('../img/countries/c6.png');
+        }
+
+        &:nth-child(8)::after {
+            background-image: url('../img/countries/c7.png');
+        }
+
+        &:nth-child(9)::after {
+            background-image: url('../img/countries/c8.png');
+        }
+
+        &:nth-child(10)::after {
+            background-image: url('../img/countries/c9.png');
+        }
+
+        &:nth-child(11)::after {
+            background-image: url('../img/countries/c10.png');
+        }
+
+        &:nth-child(12)::after {
+            background-image: url('../img/countries/c11.png');
+        }
     }
 }
 
