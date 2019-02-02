@@ -180,7 +180,7 @@ button::-moz-focus-inner {
 
 .header-main {
     min-height: 854px;
-    background: url('../img/header-bg.png') -8px -103px no-repeat;
+    background: url('../img/header-bg.png') -8px -103px / cover no-repeat;
     padding: 134px 0 100px;
     color: #fff;
 }
@@ -674,6 +674,7 @@ button::-moz-focus-inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 80px;
 
     &__item {
         position: relative;
@@ -686,8 +687,11 @@ button::-moz-focus-inner {
         font-size: 20px;
         margin-right: 23px;
         margin-bottom: 25px;
+        cursor: pointer;
+        transition: all 0.2s;
 
-        &.active {
+        &.active,
+        &:hover {
             background-color: $text_pink;
         }
 
@@ -746,6 +750,83 @@ button::-moz-focus-inner {
         &:nth-child(12)::after {
             background-image: url('../img/countries/c11.png');
         }
+    }
+}
+
+
+
+
+
+
+//---------------------------НАШИ ПРЕПОДАВАТЕЛИ------------------------------------
+
+.teachers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 576px;
+    margin-bottom: 60px;
+}
+
+.teacher {
+    width: 50%;
+
+    &__photo {
+        display: inline-block;
+        width: 50%;
+        width: 262px;
+        height: 262px;
+        background: url('../img/teachers/t1.jpg') 0px 0px / cover no-repeat;
+        vertical-align: middle;
+        margin-right: 30px;
+    }
+
+    &__right {
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(50% - 30px);
+    }
+
+    &__h3 {
+        color: #fe6868;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    &__stage {
+        font-family: 'CirceRegular', sans-serif;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__span {
+        font-family: 'CirceBold', sans-serif;
+    }
+
+    &__spec {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.teacherslist__button-wrapper {
+    text-align: center;
+}
+
+.button_teachers {
+    background-color: $text-pink;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5.04px;
+    padding: 24px 59px;
+    &:hover {
+        background-color: lighten($text-pink, 5%);
+    }
+    &:active {
+        background-color: darken($text-pink, 5%);
     }
 }
 
