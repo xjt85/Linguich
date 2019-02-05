@@ -12,4 +12,26 @@ $(document).ready(function () {
 		content.addClass("active"); //добавляем класс active только у контента, по табу которому кликнули -- content
 	});
 
+	
 });
+
+//-------------------------------Google карта------------------------------------------------
+
+function initMap() {
+	// The location of Uluru
+	var uluru = {
+		lat: 48.42,
+		lng: 56.01
+	};
+	// The map, centered at Uluru
+	var map = new google.maps.Map(
+		document.getElementById('map'), {
+			zoom: 4,
+			center: uluru
+		});
+	// The marker, positioned at Uluru
+	var marker = new google.maps.Marker({
+		position: uluru,
+		map: map
+	});
+}
