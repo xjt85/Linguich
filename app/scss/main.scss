@@ -186,7 +186,7 @@ button::-moz-focus-inner {
         position: relative;
         white-space: nowrap;
         padding-bottom: 12px;
-        font-family: CirceRegular, sans-serif;
+        font-family: Circe, sans-serif;
         transition: all 0.7s;
 
         &:hover {
@@ -383,7 +383,7 @@ button::-moz-focus-inner {
 
     &__h2 {
         display: block;
-        font-family: CirceRegular, sans-serif;
+        font-family: Circe, sans-serif;
         margin-bottom: 21px;
         font-size: 36px;
         white-space: nowrap;
@@ -462,13 +462,13 @@ button::-moz-focus-inner {
 //--------------------------------------------------------------------------------------------------------
 
 .achievements {
-    padding: 52px 0 80px;
+    padding: 52px 0 88px;
 
     &__h2 {
         position: relative;
         left: 15px;
         text-align: center;
-        margin-bottom: 75px;
+        margin-bottom: 60px;
 
         &::after {
             position: absolute;
@@ -487,8 +487,9 @@ button::-moz-focus-inner {
 }
 
 .achievement {
+    white-space: nowrap;
     &:not(:last-child) {
-        margin-bottom: 110px;
+        margin-bottom: 111px;
     }
 
     &__img {
@@ -496,6 +497,7 @@ button::-moz-focus-inner {
         vertical-align: middle;
         width: 262px;
         height: 262px;
+        margin-right: 92px;
 
         &_1 {
             background-image: url('../img/achievements/ach1.png');
@@ -523,21 +525,22 @@ button::-moz-focus-inner {
 
     &__descr {
         display: inline-block;
+        white-space: normal;
         vertical-align: middle;
         width: calc(100% - 70px - 262px);
-        margin-left: 60px;
     }
 
     &__h3 {
         font: 400 30px Circe, sans-serif;
         color: $text-pink;
         text-align: left;
-        margin-bottom: 10px;
+        margin-bottom: 21px;
     }
 
     &__p1 {
         font: 700 24px Circe, sans-serif;
         text-align: left;
+        margin-bottom: 25px;
     }
 
     &__p2 {
@@ -561,7 +564,7 @@ button::-moz-focus-inner {
 
 .download-s {
     position: relative;
-    padding-top: 90px;
+    padding-top: 86px;
     background: url('../img/download-bg.png') no-repeat;
     background-position: 100% 0;
     height: 563px;
@@ -571,17 +574,17 @@ button::-moz-focus-inner {
 .download {
     &__h2 {
         font: 700 30px/1.6em Circe, sans-serif;
-        margin-bottom: 50px;
         width: 110%;
-        margin-left: -15px;
+        margin-bottom: 45px;
+        margin-left: -42px;
     }
 
     &__p {
         font-size: 22px;
         font-weight: 400;
         line-height: 30px;
-        margin-bottom: 75px;
-        margin-left: -15px;
+        margin-bottom: 77px;
+        margin-left: -42px;
     }
 }
 
@@ -589,8 +592,8 @@ button::-moz-focus-inner {
     width: 525px;
     height: 609px;
     position: relative;
-    top: -101px;
-    left: -16px;
+    top: -97px;
+    left: -27px;
     background: url('../img/button-round_bg.png') no-repeat;
 }
 
@@ -598,8 +601,8 @@ button::-moz-focus-inner {
     width: 68px;
     height: 68px;
     position: absolute;
-    top: 107px;
-    left: 348px;
+    top: 106px;
+    left: 350px;
     background: $button_download url('../img/button-round.png') center / 69px 69px no-repeat;
     border: none;
     border-radius: 50%;
@@ -613,15 +616,27 @@ button::-moz-focus-inner {
 
 }
 
+.button-down-wrapper {
+    text-align: left;
+}
+
+.button_down {
+    padding: 27px 105px 23px;
+    margin-left: -42px;
+}
+
 //--------------------------------------------------------------------------------------
 
 .ourcourses {
-    padding-top: 120px;
+    padding-top: 116px;
 
     &__h2 {
         position: relative;
+        left: -22px;
+        font-family: $default-font, sans-serif;
+        font-weight: normal;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 72px;
 
         &::after {
             position: absolute;
@@ -641,7 +656,7 @@ button::-moz-focus-inner {
 
 .tab-header__item {
     font: 300 24px"CirceLight", sans-serif;
-    padding: 13px 0 13px 60px;
+    padding: 13px 0 13px 24px;
     cursor: pointer;
 
     &:hover {
@@ -654,10 +669,11 @@ button::-moz-focus-inner {
 }
 
 .tab-content {
-    padding-left: 40px;
+    margin-left: 18px;
 
     &__h3 {
-        font: bold 36px/1.66em 'Circe', sans-serif;
+        font: bold 36px/2em 'Circe', sans-serif;
+        margin-bottom: 23px;
     }
 
     &__p {
@@ -666,7 +682,7 @@ button::-moz-focus-inner {
     }
 
     &__text {
-        font: normal 18px/2em 'CirceRegular', sans-serif;
+        font: normal 18px/2em 'Circe', sans-serif;
     }
 
     &__item {
@@ -850,8 +866,8 @@ button::-moz-focus-inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    min-height: 576px;
-    margin-bottom: 60px;
+    min-height: 632px;
+    margin-bottom: 7px;
 }
 
 .teacher {
@@ -895,7 +911,7 @@ button::-moz-focus-inner {
     }
 
     &__stage {
-        font-family: 'CirceRegular', sans-serif;
+        font-family: 'Circe', sans-serif;
         font-size: 24px;
         margin-bottom: 30px;
     }
@@ -915,13 +931,14 @@ button::-moz-focus-inner {
 }
 
 .button_teachers {
-    background-color: $text-pink;
-    color: #ffffff;
+    background-color: #fe6868;
+    color: #fff;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 5.04px;
-    padding: 24px 59px;
+    padding: 26px 49px;
+    margin-left: 57px;
 
     &:hover {
         background-color: lighten($text-pink, 5%);
@@ -939,6 +956,7 @@ button::-moz-focus-inner {
 
     &::before {
         position: absolute;
+        z-index: 99;
         display: block;
         content: '';
         top: 0;
@@ -957,6 +975,10 @@ button::-moz-focus-inner {
         width: 100%;
         height: 91px;
         background: url('../img/map-bottom_border.png') 0px 0px / cover no-repeat;
+    }
+
+    #map {
+        height: 100%;
     }
 }
 

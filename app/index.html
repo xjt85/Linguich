@@ -166,7 +166,7 @@
                     <div class="achievement">
                         <div class="achievement__img achievement__img_4"></div>
                         <div class="achievement__descr">
-                            <h3 class="achievement__h3">Аня, 6 класс</h3>
+                            <h3 class="achievement__h3">Вася, 5 класс</h3>
                             <p class="achievement__p1">От двойки до пятерки по английскому за 2 месяца</p>
                             <p class="achievement__p2">За два месяца упорной работы с нашим преподавателей
                                 Еленой
@@ -212,7 +212,9 @@
                         эффективность изучения английского языка.</h2>
                     <p class="download__p">Частота и длительность занятий, выполнение заданий, как увлечь ребенка, и
                         многое другое.</p>
-                    <button class="button button_down">Скачать</button>
+                    <div class="button-down-wrapper">
+                        <button class="button button_down">Скачать</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -416,7 +418,27 @@
         </div>
     </footer>
     <script src="js/scripts.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMBK8E8vyxYKp0nv5-eReUD0QmQeI0K2Y&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMBK8E8vyxYKp0nv5-eReUD0QmQeI0K2Y&callback=initMap"
+        type="text/javascript"></script>
+    <!-- <script type="text/javascript">
+        function initMap() {
+            var kras = {
+                lat: 92.85,
+                lng: 56.01
+            };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 4,
+                    center: kras
+                });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: kras,
+                map: map
+            });
+        };
+    </script> -->
 </body>
 
 </html>

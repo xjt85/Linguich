@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 $(document).ready(function () {
 	$(".js-tab-trigger").click(function () {
@@ -11,11 +11,7 @@ $(document).ready(function () {
 		$(".js-tab-content.active").removeClass("active"); //убираем класс Active у всех content
 		content.addClass("active"); //добавляем класс active только у контента, по табу которому кликнули -- content
 	});
-
-	
 });
-
-//-------------------------------Google карта------------------------------------------------
 
 function initMap() {
 	// The location of Uluru
@@ -34,4 +30,6 @@ function initMap() {
 		position: uluru,
 		map: map
 	});
-}
+};
+
+//-------------------------------Google карта------------------------------------------------
