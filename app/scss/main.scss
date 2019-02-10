@@ -488,6 +488,7 @@ button::-moz-focus-inner {
 
 .achievement {
     white-space: nowrap;
+
     &:not(:last-child) {
         margin-bottom: 111px;
     }
@@ -654,22 +655,57 @@ button::-moz-focus-inner {
     }
 }
 
+.tab-header {
+    position: relative;
+
+    &::after {
+        display: block;
+        position: absolute;
+        z-index: 98;
+        top: 0;
+        right: 38px;
+        content: '';
+        width: 5px;
+        height: 100%;
+        border-radius: 3px;
+        background-color: #e6e6e6;
+    }
+}
+
 .tab-header__item {
     font: 300 24px"CirceLight", sans-serif;
     padding: 13px 0 13px 24px;
     cursor: pointer;
+    position: relative;
 
     &:hover {
-        opacity: 0.7;
+        color: lighten($text_grey, 30%);
     }
 
     &.active {
         font-family: 'CirceBold', sans-serif;
     }
+
+    &:hover::before,
+    &.active::before {
+        opacity: 1;
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: 99;
+        top: 0px;
+        right: 38px;
+        width: 5px;
+        height: 100%;
+        border-radius: 3px;
+        background-color: $text_pink;
+    }
+
 }
 
 .tab-content {
     margin-left: 18px;
+    position: relative;
 
     &__h3 {
         font: bold 36px/2em 'Circe', sans-serif;
@@ -687,6 +723,7 @@ button::-moz-focus-inner {
 
     &__item {
         display: none;
+        padding: 0 10px;
         background-color: #f1f5f9;
         background-repeat: no-repeat;
 
@@ -749,7 +786,7 @@ button::-moz-focus-inner {
 //---------------------------Список преподавателей------------------------------------------------
 
 .teacherslist {
-    padding-bottom: 115px;
+    padding-bottom: 24px;
 
     &__h2 {
         position: relative;
