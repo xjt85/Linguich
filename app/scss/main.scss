@@ -256,7 +256,7 @@ button::-moz-focus-inner {
 
 .header-main {
     height: 854px;
-    background: url('../img/header-bg.png') 50% -100px / cover no-repeat;
+    background: url('../img/header-bg.png') 50% -100px / 1920px 955px no-repeat;
     padding: 134px 0 100px;
     color: #fff;
 }
@@ -418,7 +418,7 @@ button::-moz-focus-inner {
         font-family: Circe, sans-serif;
         margin-bottom: 21px;
         font-size: 36px;
-        white-space: nowrap;
+        // white-space: nowrap;
         margin-left: 65px;
 
         &_red {
@@ -1045,7 +1045,7 @@ button::-moz-focus-inner {
         left: 0;
         width: 100%;
         height: 91px;
-        background: url('../img/map-top_border.png') 0px -2px / cover no-repeat;
+        background: url('../img/map-top_border.png') 50% -2px / cover no-repeat;
     }
 
     &::after {
@@ -1056,7 +1056,7 @@ button::-moz-focus-inner {
         left: 0;
         width: 100%;
         height: 91px;
-        background: url('../img/map-bottom_border.png') 0px 0px / cover no-repeat;
+        background: url('../img/map-bottom_border.png') 50% 0px / cover no-repeat;
     }
 
     #map {

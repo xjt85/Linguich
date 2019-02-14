@@ -4,7 +4,16 @@
 /*==========  Desktop First  ==========*/
 
 // <=1200px
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(lg) {
+    .contacts,
+    .menu {
+        margin-left: 0;
+    }
+
+    .menu__li:not(:first-child) .menu__link {
+        margin-left: 27px;
+    }
+}
    
 // <=992px
 @include media-breakpoint-down(md) {}
