@@ -30,7 +30,7 @@ gulp.task('styles', function() {
 	return gulp.src('app/scss/**/*.scss')
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
-	.pipe(autoprefixer(['last 15 versions']))
+	.pipe(autoprefixer(['last 15 versions, ie 8-11']))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())

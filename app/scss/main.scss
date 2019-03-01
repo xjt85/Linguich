@@ -180,12 +180,8 @@ button::-moz-focus-inner {
 }
 
 .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0 0 0 71px;
@@ -203,36 +199,11 @@ button::-moz-focus-inner {
         white-space: nowrap;
         padding-bottom: 12px;
         font-family: Circe, sans-serif;
-        -webkit-transition: all 0.7s;
-        transition: all 0.7s;
 
         &:hover {
             text-decoration: none;
-
-            -webkit-animation: menu_border 0.7s;
-
-                    animation: menu_border 0.7s;
+            border-bottom: 2px solid $text-blue;
             color: $text-blue;
-        }
-    }
-
-    @-webkit-keyframes menu_border {
-        from {
-            border-bottom: 2px solid transparent;
-        }
-
-        to {
-            border-bottom: 2px solid $text-blue;
-        }
-    }
-
-    @keyframes menu_border {
-        from {
-            border-bottom: 2px solid transparent;
-        }
-
-        to {
-            border-bottom: 2px solid $text-blue;
         }
     }
 
@@ -286,8 +257,8 @@ button::-moz-focus-inner {
     &::after {
         right: -59px;
         -webkit-transform: scale(-1, 1);
-            -ms-transform: scale(-1, 1);
-                transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
     }
 }
 
@@ -585,8 +556,7 @@ button::-moz-focus-inner {
 //--------------------------------------------------------------------------------------------------------
 
 .flamp-s {
-    min-height: 1114px;
-    padding-bottom: 190px;
+    padding-bottom: 100px;
 }
 
 .flamp-widget {
@@ -645,7 +615,7 @@ button::-moz-focus-inner {
 
     &:hover {
         -webkit-box-shadow: 0px 0px 40px $button_download;
-                box-shadow: 0px 0px 40px $button_download;
+        box-shadow: 0px 0px 40px $button_download;
         background-color: darken($button_download, 3%);
     }
 
@@ -815,6 +785,43 @@ button::-moz-focus-inner {
     }
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 16vw);
+    grid-column-gap: 15px;
+    margin-bottom: 40px;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__item {
+        &:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        &:nth-child(2) {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        &:nth-child(5) {
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        &:nth-child(8) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    }
+}
 
 
 //---------------------------Список преподавателей------------------------------------------------
@@ -825,7 +832,7 @@ button::-moz-focus-inner {
     &__h2 {
         position: relative;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 90px;
 
         &::after {
             position: absolute;
@@ -848,10 +855,10 @@ button::-moz-focus-inner {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-bottom: 80px;
 
     &__item {
@@ -944,16 +951,17 @@ button::-moz-focus-inner {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     min-height: 632px;
     margin-bottom: 7px;
 }
 
 .teacher {
     width: 50%;
+    margin-bottom: 40px;
 
     &__photo {
         display: inline-block;
@@ -1122,56 +1130,15 @@ button::-moz-focus-inner {
         font-family: 'Font Awesome 5 Free';
         font-size: 16px;
         font-weight: 900;
-        width: 25px;
-        height: 25px;
-        margin-right: 5px;
-        background-color: #e6e6e6;
-        cursor: pointer;
-        i {
-            color: #f25e5e;
-        }
-    }
-
-    &__address {
-        position: relative;
-        padding-left: 25px;
-        white-space: nowrap;
-
-        &::before {
-            position: absolute;
-            top: 6px;
-            left: 0;
-            display: block;
-            font-family: 'Font Awesome 5 Free';
-            font-size: 10px;
-            font-weight: 900;
-            content: '\f124';
-            color: #f25e5e;
-        }
-
-    }
-
-    &__phone {}
-
-    &__phone-label {
-        font-family: CirceBold, sans-serif;
-    }
-
-    .social-text {
-        margin-bottom: 8px;
-    }
-
-    .social-icons__icon {
-        display: inline-block;
-        text-align: center;
-        font-family: 'Font Awesome 5 Free';
-        font-size: 16px;
-        font-weight: 900;
         color: #f25e5e;
         width: 25px;
         height: 25px;
         margin-right: 5px;
         background-color: #e6e6e6;
+
+        &:hover {
+            color: #eb8b8b;
+        }
     }
 }
 
