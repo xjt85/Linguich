@@ -1,66 +1,109 @@
 @import "vars";
 
-
 /*==========  Desktop First  ==========*/
 
 // <=1200px
 @include media-breakpoint-down(lg) {
+  .header-logo {
+    width: 100px;
+  }
 
-    .header-logo {
-        width: 100px;
-    }
+  .contacts,
+  .menu {
+    margin-left: 0;
+    font-size: 16px;
+  }
 
-    .contacts,
-    .menu {
-        margin-left: 0;
-        font-size: 16px;
-    }
+  .contacts__address {
+    margin-right: 88px;
+  }
 
-    .contacts__address {
-        margin-right: 88px;
-    }
+  .menu__li:not(:first-child) .menu__link {
+    margin-left: 46px;
+  }
 
-    .menu__li:not(:first-child) .menu__link {
-        margin-left: 46px;
-    }
+  .edu__li {
+    font-size: 16px;
+    padding: 10px 10px 5px;
+  }
 
-    .edu__li {
-        font-size: 16px;
-        padding: 10px 10px 5px;
-    }
+  .button-round-wrapper {
+    left: -97px;
+  }
 
-    .button-round-wrapper {
-        left: -97px;
-    }
-
-    .tab-header:after,
-    .tab-header__item.active::before,
-    .tab-header__item:hover::before {
-        right: 0;
-    }
+  .tab-header:after,
+  .tab-header__item.active::before,
+  .tab-header__item:hover::before {
+    right: 0;
+  }
 }
 
 // <=992px
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(md) {
+  .contacts {
+    text-align: center;
+  }
+  .header-main {
+    background: url(../img/header-bg.png) 50% 0px/1920px no-repeat;
+    background-size: cover;
+    padding: 134px 0 70px;
+  }
+  .h1 {
+    font-size: 28px;
+    &::before {
+      left: -9px;
+    }
+    &::after {
+      right: -9px;
+    }
+  }
+  .edu__li {
+    padding: 10px 29px 5px;
+    margin: 0 auto 13px;
+    width: 70%;
+  }
+  .methodics {
+    padding-left: 200px;
+  }
+  .button-more-wrapper {
+    text-align: center;
+  }
+  .aims-s {
+    padding-top: 50px;
+  }
+  .aim-head__h2 {
+    font-size: 28px;
+  }
+  .aim-head__h2_red {
+    font-size: 26px;
+  }
+  .achievement:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
 
 // <=768px
-@include media-breakpoint-down(sm) {}
-
+@include media-breakpoint-down(sm) {
+}
 
 // <=576px
-@include media-breakpoint-down(xs) {}
-
+@include media-breakpoint-down(xs) {
+}
 
 /*==========  Mobile First  ==========*/
 
 // ≤576px
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+}
 
 // ≤768px
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+}
 
 // ≤992px
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+}
 
 // ≤1200px
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+}
