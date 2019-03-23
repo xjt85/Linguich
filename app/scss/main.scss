@@ -731,31 +731,6 @@ button::-moz-focus-inner {
         background-color: #f1f5f9;
         background-repeat: no-repeat;
 
-        &:nth-child(1) {
-            background-image: url("../img/services/services-bg1.png");
-            background-position: -485% -25%;
-        }
-
-        &:nth-child(2) {
-            background-image: url("../img/services/services-bg2.png");
-            background-position: 39px 23px;
-        }
-
-        &:nth-child(3) {
-            background-image: url("../img/services/services-bg3.jpg");
-            background-position: -65px 0px;
-        }
-
-        &:nth-child(4) {
-            background-image: url("../img/services/services-bg4.jpg");
-            background-position: -87px 0;
-        }
-
-        &:nth-child(5) {
-            background-image: url("../img/services/services-bg5.jpg");
-            background-position: -102px 0;
-        }
-
         &.active {
             display: block;
         }

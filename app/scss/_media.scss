@@ -5,16 +5,41 @@
 
 // <=1200px
 @include media-breakpoint-down(lg) {
+
+    .header-logo {
+        width: 100px;
+    }
+
     .contacts,
     .menu {
         margin-left: 0;
+        font-size: 16px;
+    }
+
+    .contacts__address {
+        margin-right: 88px;
     }
 
     .menu__li:not(:first-child) .menu__link {
-        margin-left: 27px;
+        margin-left: 46px;
+    }
+
+    .edu__li {
+        font-size: 16px;
+        padding: 10px 10px 5px;
+    }
+
+    .button-round-wrapper {
+        left: -97px;
+    }
+
+    .tab-header:after,
+    .tab-header__item.active::before,
+    .tab-header__item:hover::before {
+        right: 0;
     }
 }
-   
+
 // <=992px
 @include media-breakpoint-down(md) {}
 
@@ -24,7 +49,7 @@
 
 // <=576px
 @include media-breakpoint-down(xs) {}
-   
+
 
 /*==========  Mobile First  ==========*/
 
